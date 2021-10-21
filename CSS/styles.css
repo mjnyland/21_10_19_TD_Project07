@@ -91,7 +91,6 @@ nav{
 .grid-container{
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
-  grid-gap: 1em;
   grid-template-areas: 
       "traffic traffic"
       "daily-traffic daily-traffic"
@@ -101,36 +100,14 @@ nav{
       "recent-activity  recent-activity"
       "message-user message-user"
       "settings settings";
-  }
-
-@media (min-width: 700px) {
-  .grid-container{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-    grid-gap: 1em;
-    grid-template-areas: 
-        "traffic traffic"
-        "daily-traffic mobile-users"
-        "social-stats social-stats"
-        "new-members  new-members"
-        "recent-activity  recent-activity"
-        "message-user message-user"
-        "settings settings";
-    }
 }
-  
 
-.grid-item{
-  border-bottom: 1px solid rgb(230, 230, 230);
-  background-color: rgb(127, 255, 0, .2);
-}
 
 /*
 .grid-item > * {
   opacity: 0;
 }
 */
-
 
 .traffic{
   grid-area: traffic;
@@ -162,6 +139,12 @@ nav{
 
 .settings{
   grid-area: settings;
+}
+
+/*------Row 1------*/
+
+.traffic{
+  border-bottom: 1px solid #D7D7D7;
 }
 
 .dash-tab {
@@ -223,22 +206,350 @@ h3 {
   margin: 2em auto;
 }
 
+/*------Row 2 = Daily Traffic------*/
+
+.daily-traffic{
+  border-right: 1px solid #D7D7D7;
+}
+
+/*------Row 4 - Social Stats------*/
+
+.social-stats{
+  height: 400px;
+  border-top: 1px solid #D7D7D7;;
+  border-bottom: 1px solid #D7D7D7;
+}
+
 .stat{
-  background-color: rgb(220, 220, 220);
-  border: 1px solid grey;
+  background-color: #F5F5F5;
+  border: 1px solid #CFCFCF;
   border-radius: 5px;
+  height: 91px;
+  width: 90%;
+  margin: .5em 0;
 }
 
 .social-icon{
   display: inline-block;
+  margin-left: 20px;
+  padding: .75rem;
+  margin-top: 10px;
+}
+
+.stat-text{
+  display: inline-block;
+  padding: .75rem 0 .7rem .25rem;
 }
 
 .company{
+  display: block;
   color: #7477BF;
-  font-size: .5em;
+  font-size: .9em;
 }
 
 .social-stat{
   display: inline-block;
-  font-size: 3em;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.stats {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*------Row 5 - New Members------*/
+
+.new-members{
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.members{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  margin: 1.5em;
+}
+
+.members img{
+  border-radius: 500px;
+  height: 50px;
+  width: 50px;
+}
+
+hr{
+  width: 96%;
+  margin: 0 auto;
+  background-color: #D7D7D7;
+  border: none;
+  height: 1px;
+}
+
+/*------Row 6 - Recent Activity------*/
+
+.recent-activity{
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.activity{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  margin: 1.5em;
+}
+
+.activity img{
+  border-radius: 500px;
+  height: 50px;
+  width: 50px;
+}
+
+em{
+  font-style: normal;
+  font-weight: 400;
+}
+
+.right-arrow {
+  display: none;
+}
+
+hr{
+  width: 96%;
+  margin: 0 auto;
+  background-color: #D7D7D7;
+  border: none;
+  height: 1px;
+}
+
+/*------Row 7 - Message User------*/
+
+.message-user{
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.message-user input{
+  display: block;
+  margin: 1em auto;
+  background-color: #F5F5F5;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: 95%;
+  font-weight: 300;
+}
+
+.message-user button{
+  display: block;
+  margin: 1em auto;
+  background-color: #7477BF;
+  color: white;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: 95%;
+  height: 44px;
+  font-weight: 300;
+}
+
+
+.search-input {
+  height: 45px;
+}
+
+.message-input{
+  height: 134px;
+}
+
+/*------Row 8 - Settings------*/
+
+.text-and-toggle{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  width: 95%;
+}
+
+.slider{
+  display: flex;
+  width: 95px;
+  height: 35px;
+  margin-left: auto;
+  background-color: #7477BF;
+  border: 1px solid #D7D7D7;
+  border-radius: 40px;
+  align-items: center;
+}
+
+.toggle-circle{
+  height: 25px;
+  width: 25px;
+  border-radius: 20px;
+  border: 1px solid #D7D7D7;
+  background-color: white;
+  margin-right: 6px;
+  margin-left: auto;
+}
+
+.slider p {
+  color: white;
+  margin-left: 10px;
+}
+
+
+.settings-buttons{
+  margin: 1em auto;
+  width: 95%;
+}
+
+.settings button{
+  display: inline-block;
+  color: white;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: 45%;
+  height: 44px;
+  font-weight: 300;
+}
+
+.save-button{
+  background-color: #7477BF;
+  margin-right: 1em;
+}
+
+.cancel-button{
+  background-color: #999999;
+  margin-left: 1em;
+}
+
+.timezone-dropdown{
+  display: block;
+  margin: 1em auto;
+  background-color: #F5F5F5;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: 95%;
+  height: 45px;
+  font-weight: 300;
+}
+
+/*------Media Queries------*/
+
+@media (max-width: 270px) {
+  .social-stat{
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .stat-text{
+    padding: 1rem 0 1rem .2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-areas: 
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "social-stats social-stats"
+        "new-members  new-members"
+        "recent-activity  recent-activity"
+        "message-user message-user"
+        "settings settings";
+    }
+
+    /*------Row 4 - Social Stats------*/
+
+    .social-stats{
+      height: 170px;
+    }
+
+    .stats {
+      display: flex;
+      position: relative;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .stat{
+      margin: 0 .25em;
+    }
+
+    /*------Row 5 - New Members------*/
+
+    .members{
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      align-items: center;
+      font-weight: 300;
+      margin: 1.5em;
+    }
+
+    .name-and-email{
+      margin-left: 1em;
+    }
+
+    .members p {
+      margin-left: auto;
+    }
+
+    /*------Row 6 - Recent Activity------*/
+
+    .activity{
+      display: flex;
+      flex-direction: row;
+      text-align: left;
+      align-items: center;
+      font-weight: 300;
+      margin: 1.5em;
+    }
+
+    .activty-and-time{
+      margin-left: 1em;
+    }
+
+    .right-arrow {
+      display: inline-block;
+      margin-left: auto;
+    }
+
+
+     /*------Row 8 - Settings------*/
+
+    .text-and-toggle{
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
+      margin-left: 1em;
+      width: 50%;
+    }
+
+}
+
+@media (min-width: 1024px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-areas: 
+        "traffic traffic"
+        "daily-traffic mobile-users"
+        "social-stats social-stats"
+        "new-members  recent-activity"
+        "message-user settings"
+  }
+
+  .new-members{
+    border-right: 1px solid #D7D7D7;
+  }
+
+  .message-user{
+    border-right: 1px solid #D7D7D7;
+  }
 }
