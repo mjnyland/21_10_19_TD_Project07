@@ -1,7 +1,22 @@
+//line chart
+
 var ctx = document.getElementById('line-chart');
 
+//hourly data
 var stars = [510, 1200, 1000, 2000, 1500, 1700, 1200, 1900, 2100, 1500, 2500];
 var hours = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
+
+//daily data
+var trafficDaily = [510, 1200, 1000, 2000, 1500, 1700, 1200, 1900, 2100, 1500, 2500];
+var daysDaily = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
+
+//weekly data
+var trafficWeekly = [510, 1200, 1000, 2000, 1500, 1700, 1200, 1900, 2100, 1500, 2500];
+var weeksWeekly = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
+
+//monthly data
+var trafficMonthly = [510, 1200, 1000, 2000, 1500, 1700, 1200, 1900, 2100, 1500, 2500];
+var monthsMonthly = ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31',];
 
 var myChart = new Chart(ctx, {
     options: {
@@ -32,7 +47,7 @@ var myChart = new Chart(ctx, {
 
 
 
-
+//bar chart
 
 var ctx = document.getElementById('bar-chart');
 
@@ -65,7 +80,7 @@ var myChart = new Chart(ctx, {
 
 
 
-
+//pie chart
 
 var ctx = document.getElementById('pie-chart');
 

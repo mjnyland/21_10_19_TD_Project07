@@ -40,38 +40,14 @@ document.addEventListener('click', (e) => {
     }
 });
 
+//localStorage.getItem("emailSliderOnDisplay");
+//localStorage.setItem("emailSliderOnDisplay", "none");
+
 
 // Toggle On Off //
 
-document.addEventListener('click', (e) => {
-    const sliderCircle = document.querySelector('.toggle-circle');
-    if (e.target === emailSliderOn) {
-        localStorage.setItem("emailSliderOnDisplay", "none");
-        emailSliderOn.style.display = localStorage.getItem("emailSliderOnDisplay");
 
-        localStorage.setItem("emailSliderOffDisplay", "flex");
-        emailSliderOff.style.display = localStorage.getItem("emailSliderOffDisplay");
 
-    } else if (e.target === emailSliderOff) {
-        localStorage.setItem("emailSliderOffDisplay", "none");
-        emailSliderOff.style.display = localStorage.getItem("emailSliderOffDisplay");
-
-        localStorage.setItem("emailSliderOnDisplay", "flex");
-        emailSliderOn.style.display = localStorage.getItem("emailSliderOnDisplay");
-        
-    }
-});
-
-document.addEventListener('click', (e) => {
-    const sliderCircle = document.querySelector('.toggle-circle');
-    if (e.target === profileSliderOn) {
-        profileSliderOn.style.display = 'none';
-        profileSliderOff.style.display = 'flex';
-    } else if (e.target === profileSliderOff) {
-        profileSliderOff.style.display = 'none';
-        profileSliderOn.style.display = 'flex';
-    }
-});
 
 // Message Send //
 
