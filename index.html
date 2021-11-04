@@ -223,7 +223,8 @@
                     <h3>MESSAGE USER</h3>
 
                     <form method="GET">
-                        <input name="searched-user" type="text" placeholder="Search for User" class="search-input" required>
+                        <input name="searched-user" type="text" placeholder="Search for User" class="search-input" required autocomplete="off">
+                        <ul class="autocompleteCont"></ul>
                         <input name="message" type="text" placeholder="Message for User" class="message-input" required>
                         <input class="send-button" type="submit" value="SEND"></input>
                     </form>
@@ -238,7 +239,7 @@
                     <div class="text-and-toggle profile-settings">
                         <p>Send Email Notifications</p>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" class="emailBox" onclick="emailSave()">
                             <span class="slider round">
                                 <p class="on">ON</p>
                                 <p class="off">OFF</p>
@@ -247,9 +248,9 @@
                     </div>
 
                     <div class="text-and-toggle profile-settings">
-                        <p>Send Email Notifications</p>
+                        <p>Set Profile to Public</p>
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" class="profileBox" onclick="profileSave()">
                             <span class="slider round">
                                 <p class="on">ON</p>
                                 <p class="off">OFF</p>
@@ -307,7 +308,7 @@
                     
                     <div class="settings-buttons">
                         <button type="button" class="save-button">SAVE</button>
-                        <button type="button" class="cancel-button">CANCEL</button>
+                        <button type="button" class="cancel-button" onclick="clearLocalStorage()">CANCEL</button>
                     </div>
                 </section>
             </section>

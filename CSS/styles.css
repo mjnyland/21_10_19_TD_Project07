@@ -254,6 +254,7 @@ h3 {
 }
 
 .times{
+  cursor: pointer;
   width: 90%;
   margin: 0 auto;
 }
@@ -465,6 +466,40 @@ hr{
   font-size: 14px;
   text-align: center;
   line-height: 42px;
+}
+
+
+.autocompleteCont {
+  display: none;
+  margin: -10px auto 1em auto;
+  padding: 0;
+  background-color: #F5F5F5;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: 95%;
+  font-weight: 300;
+}
+
+.autocompleteCont :first-child{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.autocompleteCont :last-child{
+  border-bottom: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.autoCompleteName {
+  list-style-type: none;
+  padding: .5em;
+  background-color: white;
+  border-bottom: 1px solid #D7D7D7;
+}
+
+.autoCompleteName:hover {
+  background-color: rgb(234, 234, 234);
 }
 
 /*------Row 8 - Settings------*/
