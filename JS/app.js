@@ -128,8 +128,8 @@ document.addEventListener('keyup', (e) => {
     }
 });
 
+
 document.addEventListener('click', (e) => {
-    console.log(e.target);
     const autoCompleteLi = autoCompleteCont.childNodes;
     for (let i = 0; i<4; i++){
         if(e.target === autoCompleteLi[i]){
