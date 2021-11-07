@@ -259,6 +259,7 @@ h3 {
 }
 
 .times{
+  text-align: right;
   cursor: pointer;
   width: 90%;
   margin: 0 auto;
@@ -276,15 +277,15 @@ h3 {
 }
 
 .widget-container-full{
+  height: 100%;
   width: 80vw;
-  padding: 4em;
   margin: 2em auto;
 }
 
 .widget-container-half{
-  height: 300px;
+  height: 80%;
   width: 40vw;
-  margin: 2em auto;
+  margin: 1em auto;
 }
 
 canvas{
@@ -764,6 +765,15 @@ input:checked + .slider:before {
   .stat-text{
     padding: 1rem 0 1rem .2rem;
   }
+
+  .alert-text{
+    font-size: 10px;
+  }
+
+  .times{
+    text-align: center;
+    padding: 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -820,12 +830,13 @@ input:checked + .slider:before {
     }
 
     .widget-containter-full{
+
       width: 80vw;
     }
 
     .widget-containter-half{
       background-color: rgb(127, 255, 0, .4);
-      height: 100px;
+
       width: 40vw;
       margin: 2em auto;
     }
