@@ -8,6 +8,11 @@ body{
   margin: 0;
 }
 
+button,
+.send-button{
+  cursor: pointer;
+}
+
 /*------Header------*/
 header{
   background-color: #7477BF;
@@ -271,7 +276,6 @@ h3 {
 }
 
 .widget-container-full{
-  height: 50vh;
   width: 80vw;
   padding: 4em;
   margin: 2em auto;
@@ -463,6 +467,25 @@ hr{
 }
 
 .sent-confirmation p{
+  font-size: 14px;
+  text-align: center;
+  line-height: 42px;
+}
+
+.empty-field-error{
+  display: none;
+  position: relative;
+  margin: 1em auto;
+  background-color: #ba4747;
+  color: white;
+  border: 1px solid #D7D7D7;
+  border-radius: 5px;
+  width: 95%;
+  height: 44px;
+  font-weight: 300;
+}
+
+.empty-field-error p{
   font-size: 14px;
   text-align: center;
   line-height: 42px;

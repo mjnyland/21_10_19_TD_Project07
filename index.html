@@ -223,13 +223,16 @@
                     <h3>MESSAGE USER</h3>
 
                     <form method="GET">
-                        <input name="searched-user" type="text" placeholder="Search for User" class="search-input" required autocomplete="off">
+                        <input name="searched-user" type="text" placeholder="Search for User" class="search-input" autocomplete="off">
                         <ul class="autocompleteCont"></ul>
-                        <input name="message" type="text" placeholder="Message for User" class="message-input" required>
+                        <input name="message" type="text" placeholder="Message for User" class="message-input" autocomplete="off">
                         <input class="send-button" type="submit" value="SEND"></input>
                     </form>
                     <div class="sent-confirmation">
                         <p>MESSAGE SENT</p>
+                    </div>
+                    <div class="empty-field-error">
+                        <p>ALL FIELDS MUST BE FILLED</p>
                     </div>
                     
                 </section>
